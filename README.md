@@ -1,73 +1,184 @@
-# Welcome to your Lovable project
 
-## Project info
+# 📚 LearnHub – Master Essential Skills for Modern Success
 
-**URL**: https://lovable.dev/projects/94fcbf69-873d-448a-83db-67460a17a8cd
+**LearnHub** is a modern, interactive learning platform designed to help professionals and learners acquire today’s most in-demand skills.  
+From **Entrepreneurship** and **Product Management** to **AI for Business Leaders**, LearnHub offers curated content, expert-led lectures, and a built-in tracking system to monitor learning engagement.
 
-## How can I edit this code?
+***
 
-There are several ways of editing your application.
+## 🚀 Technology Stack
 
-**Use Lovable**
+### Frontend
+- **React 18 + Vite** for fast and modern frontend development
+- **TypeScript** for type safety
+- **Tailwind CSS** for responsive, modern UI
+- **React Router** for smooth client-side navigation
+- **Lucide Icons** for clean, scalable iconography
+- **Shadcn/UI** (if using – assumed from styling pattern)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/94fcbf69-873d-448a-83db-67460a17a8cd) and start prompting.
+### Backend
+- **Node.js + Express.js** for robust API handling
+- **MongoDB** (via Mongoose ODM) for data persistence
+- **Session-based Authentication** with **Demo User Login**
+- **CORS** enabled for frontend-backend communication
+- **Click & Page Tracking System** with storage in logs
 
-Changes made via Lovable will be committed automatically to this repo.
+### Development Tools
+- **Nodemon** for auto-restart in backend dev
+- **ESLint & Prettier** for clean, consistent code
+- **Git** for version control
 
-**Use your preferred IDE**
+***
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📁 Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```
+learnhub/
+├── backend/                  # Backend Node.js application
+│   ├── app.js                 # Main Express server
+│   ├── models/                # Mongoose models
+│   ├── routes/                # API endpoints
+│   ├── utils/                  # Utility & tracking functions
+│   ├── package.json
+│   └── logs.csv                # User activity logs
+├── frontend/                  # React application
+│   ├── src/
+│   │   ├── components/         # Reusable UI parts
+│   │   ├── pages/              # Page views (Home, Course, Lecture)
+│   │   ├── data/               # Course data
+│   │   ├── types/              # Type definitions
+│   │   └── main.tsx            # App entry
+│   ├── package.json
+│   └── tailwind.config.js
+└── README.md
+```
 
-Follow these steps:
+***
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Installation & Setup
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
+- MongoDB (local or Atlas)
+- Git
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 1. Clone & Setup
+```bash
+git clone 
+cd learnhub
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 2. Backend Setup
+```bash
+cd backend
+npm install
+# Create .env
+# MONGODB_URI=mongodb://localhost:27017/learnhub
+# SESSION_SECRET_KEY=your_secret
+# FRONTEND_URL=http://localhost:5173
+# PORT=3000
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 3. Frontend Setup
+```bash
+cd frontend
+npm install
+# Create .env
+# VITE_BACKEND_URL=http://localhost:3000
+npm run dev
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+***
 
-**Use GitHub Codespaces**
+## 🔧 Environment Variables
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Backend (.env)
+```
+MONGODB_URI=mongodb://localhost:27017/learnhub
+SESSION_SECRET_KEY=your_secret
+FRONTEND_URL=http://localhost:5173
+PORT=3000
+```
 
-## What technologies are used for this project?
+### Frontend (.env)
+```
+VITE_BACKEND_URL=http://localhost:3000
+```
 
-This project is built with:
+***
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📱 Application Features
 
-## How can I deploy this project?
+### 🔐 Demo & Authentication
+- Select from demo users (**John Doe**, **Jane Smith**, **Bob Wilson**)
+- In production: integrate with your real authentication system
 
-Simply open [Lovable](https://lovable.dev/projects/94fcbf69-873d-448a-83db-67460a17a8cd) and click on Share -> Publish.
+### 📚 Course Offerings
+| Level       | Course Name                         | Duration | Lectures | Instructor         |
+|-------------|-------------------------------------|----------|----------|--------------------|
+| Beginner    | Modern Entrepreneurship Fundamentals| 8 weeks  | 10       | Sarah Chen         |
+| Intermediate| Strategic Product Management        | 10 weeks | 10       | Michael Rodriguez  |
+| Beginner    | Digital Marketing Mastery           | 12 weeks | 10       | Emma Thompson      |
+| Beginner    | Personal Finance & Wealth Building  | 6 weeks  | 10       | David Park         |
+| Intermediate| AI for Business Leaders             | 8 weeks  | 10       | Dr. Lisa Wang      |
 
-## Can I connect a custom domain to my Lovable project?
+### 📊 Tracking System
+- All **page views** and **click events** logged with user email, timestamp, and action
+- Data saved to `backend/logs.csv` for analysis
 
-Yes, you can!
+### 🎨 Modern UI
+- Fully responsive layout
+- Sleek Tailwind CSS design
+- Intuitive navigation with clear CTAs
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+***
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🗺️ Navigation Flow
+1. **Home Page** → View course catalog
+2. **Course Details** → Learn about curriculum
+3. **Lecture Pages** → Watch content
+4. **Tracking** → System logs interactions
+5. **Profile (Planned)** → Track your progress
+
+***
+
+## 📈 Analytics & Monitoring
+- **Event Context**: Course / Page
+- **Event Name**: Click, Page View
+- **Description**: Detailed user action notes
+- **User Tracking**: Linked to authenticated user
+
+***
+
+## 🚀 Deployment
+- **Backend**: Deploy to Heroku / Railway / Render
+- **Frontend**: Deploy to Netlify / Vercel
+- **MongoDB**: Use MongoDB Atlas for cloud storage
+
+***
+
+## 🔮 Future Enhancements
+- Real user authentication
+- Progress tracking dashboard
+- Certificates for completed courses
+- Payment integration for premium access
+- Instructor course creation tools
+
+***
+
+## 🆘 Support
+If you run into issues:
+1. Check browser console for frontend errors  
+2. Verify `.env` variables  
+3. Confirm MongoDB connection  
+4. Ensure backend is running before frontend
+
+***
+
+✅ **LearnHub** is your gateway to mastering skills for the modern workplace — Built for learners, by experts.
+
+
+
+Do you want me next to **add screenshots and badges** so your README looks like a polished open-source project on GitHub? That would make it look more like TechLearn Academy’s professional README.
